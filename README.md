@@ -2,8 +2,6 @@
 
 ## How to Navigate this Project
 
----
-
 * **Code** - Folder for Jupyter notebooks.
     * [Cleaning.ipynb](https://github.com/DavidBrynnHouse/Data_601_HW-2/blob/master/Code/Cleaning.ipynb) - Jupyter notebook used to pull data from API and save as csv.
     *  [Executive Analysis.ipynb](https://github.com/DavidBrynnHouse/Data_601_HW-2/blob/master/Code/Executive%20Analysis.ipynb) - Jupyter notebook containing the main analysis for this project.
@@ -14,32 +12,49 @@
 * [README.md](https://github.com/DavidBrynnHouse/Data_601_HW-1/blob/master/README.md) - A description of the project goals requirements and limitations.
 
 
+---
+
+## Overview
+
+The API that I chose to work with was the [Open Weather API](https://openweathermap.org/api) which provides information about current and past weater conditions. I used the requests library to pull data from their API on several thousand U.S. cities in order to get an idea of the relationship between temperature and humidity. 
+
+---
 
 ## My goals for this project
 
----
-
-The data set that I chose to work with was the full text of Special Counsel Robert Mueller's Report on Russian Interference in the 2016 Presidential Election. I retrieved a CSV of this file from https://www.kaggle.com/paultimothymooney/mueller-report. My analysis was conducted to determine where investigators were focusing their attention. A large feature of the report is that much of it is redacted. For each redacted section a reason is given. I wanted to see what were the major reasons for redactions. Previous analysis of this document included looking at the word frequency of the document. I wanted to determine the number and type of sections that were redacted.
-
-## Summary
-
-The Special Counsel Rober Mullers Investigation into Russian Interference in the 2016 Presidential Election was a landmark report which has been analyzed by many who seek to understand the Trump 2016 presidential campaign and Russia's involvement. By obtaining the frequency of unique words in the document one can learn much about what the investigation involved and what its main focus was. Because much of the report was redacted there are still large segments that are unknown to the public. By observing what sort of information was withheld readers can better understand what may be missing from the report.
-
-
-## Limitations and Basic Info of the Report
+By gathering this data using an API and the python requests library I hoped to get a better understanding of how API's function, and how to use them. I also hoped to determine how temperature and humidity are related by calculating the correlation coefficient.
 
 ---
 
-* The document is a conversion from pdf to CSV format. Because of this conversion, some words have been corrupted and therefore are uncountable. By visual inspection of the CSV however, I determined that it is not a significant amount of words that have been corrupted.
-* The document has 19196 rows and 3 columns labeled page, line, and text. page and line are both integers while text contains strings
+## Motivation and Background
 
+I chose to use the Open Weather API as I have worked with it in the past to create an apple app which informs the user of the weather in their city. I have hear anecdotes that a wet heat is worse than a dry heat, but I wondered weather there was any relationship between humidity and temperature. [This](https://trustyjoe.com/how-does-humidity-affect-temperature-in-your-house/) article explains that hotter air can hold more water which would indicate that hotter temperatures should be more humid than colder ones. 
+
+
+## Limitations
+
+
+* The data was collected all during one 30 minute period, this means that there could be a difference due to one city being measured 30 minutes later than another.
+* Another issue is that the cities being measured are in different timezones so they are being measured at different times of day which could impact the results
+* Finally we are only looking at a snapshot of data from one day in October. it is possible that if this experiment were repeated on a different day we could get different results.
+* The final data set contains 2 columns and 1344 rows
+
+---
+
+## Basic Info of the Report
+
+* The final data set contains 2 columns and 1344 rows
+* The API required a free account and provied an API key
+* There was a limit of 60 pulls in one minute, to address this I added a wait function in my code to pause the script for one second between pulls.
+
+---
 
 ## Requirements
-
----
 
 The software used in this analysis included:
 
 1) Python
 2) Pandas package for python
-3) nltk package for python
+3) requests package for python
+
+---
