@@ -5,12 +5,11 @@
 ---
 
 * **Code** - Folder for Jupyter notebooks.
-    * [Cleaning_Mueller_Csv.ipynb](https://github.com/DavidBrynnHouse/Data_601_HW-1/blob/master/Code/Cleaning_Mueller_Csv.ipynb) - Jupyter notebook used to clean and organize data.
-* **Data** - information both raw and cleaned
-    * [cleaned_mueller.csv](https://github.com/DavidBrynnHouse/Data_601_HW-1/blob/master/Data/cleaned_mueller.csv) - csv file with each individual word in its own line.
-    * [mueller_report.csv](https://github.com/DavidBrynnHouse/Data_601_HW-1/blob/master/Data/mueller_report.csv) - The full redacted Mueller Report.
-    * [redactions.csv](https://github.com/DavidBrynnHouse/Data_601_HW-1/blob/master/Data/redactions.csv) - a 2x2 csv detailing redactions of the Mueller Report.
-* [Executive-Analysis-of-Mueller-Report.ipynb](https://github.com/DavidBrynnHouse/Data_601_HW-1/blob/master/Executive-Analysis-of-Mueller-Report.ipynb) - The main Jupyter Notebook containing the analysis for this project.
+    * [Cleaning.ipynb](https://github.com/DavidBrynnHouse/Data_601_HW-2/blob/master/Code/Cleaning.ipynb) - Jupyter notebook used to pull data from API and save as csv.
+    *  [Executive Analysis.ipynb](https://github.com/DavidBrynnHouse/Data_601_HW-2/blob/master/Code/Executive%20Analysis.ipynb) - Jupyter notebook containing the main analysis for this project.
+* **Data** - List used to collect specific data and data pulled from api
+    * [temp_humidity.csv](https://github.com/DavidBrynnHouse/Data_601_HW-2/blob/master/Data/temp_humidity.csv) - csv file with with float values of temperature and humidity data taken from several thousand U.S cities at 7pm October 5, 2020
+    * [us_cities.csv](https://github.com/DavidBrynnHouse/Data_601_HW-2/blob/master/Data/us_cities.csv) - A list of several thousand U.S Cities pulled from [this](https://www.britannica.com/topic/list-of-cities-and-towns-in-the-United-States-2023068) site.
 * [LICENSE](https://github.com/DavidBrynnHouse/Data_601_HW-1/blob/master/LICENSE) - MIT License
 * [README.md](https://github.com/DavidBrynnHouse/Data_601_HW-1/blob/master/README.md) - A description of the project goals requirements and limitations.
 
